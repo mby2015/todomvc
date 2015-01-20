@@ -11,16 +11,22 @@ requirejs.config({
     baseUrl: '/base/js',
 
     paths: {
-        _: '../lib/underscore/underscore',
-        Backbone: '../lib/backbone/backbone',
-        jquery: '../lib/jquery/jquery'
+        underscore: '../lib/underscore/underscore',
+        backbone: '../lib/backbone/backbone',
+        jquery: '../lib/jquery/jquery',
+        text: '../lib/requirejs-text/text',
+        tmpl: '../html'
     },
     shim: {
-        '$': {
-            exports: 'jquery'
+        'jquery': {
+            exports: '$'
         },
         'underscore': {
             exports: '_'
+        },
+        'backbone': {
+            deps: ["underscore", "jquery"],
+            exports: 'Backbone'
         }
     },
 
