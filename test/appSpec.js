@@ -1,27 +1,32 @@
-define(['model/model'], function(Todo) {
-    describe('just checking', function() {
-        var item;
+define(['collection/collection', 'model/model', 'view/view'], function(Todos, Todo, TodosView) {
+    describe('TODO', function() {
+        var items,
+            itemsView;
+
         beforeEach(function() {
-            item = new Todo({
-                title: '',
-                note: '',
-                dueDate: '',
-                completed: false
+            items = new Todos();
+            itemsView = new TodosView({
+                collection: items
             });
         });
 
-        it('make item', function() {
-            expect(item).toBeDefined();
+        it('콜렉션이 만들어 졌는지 확인한다', function() {
+            expect(items).toBeDefined();
         });
-
-
-        it('change property', function() {
-            var obj = {
-                title: '111',
-                good: 'cccc'
-            };
-            item.changeProperty(obj);
-            console.log(item)
+        it('뷰가 만들어 졌는지 확인한다', function() {
+            expect(itemsView).toBeDefined();
         });
+        it('모델을 콜렉션에 추가한다', function() {
+            items.push([{ title: 'my wish items', note: '- apple imac retina display, - furniture, - earphone', dueDate: '2015-01-24', completed: false }])
+            //모델이 잘 들어갔는지 확인을 이렇게 하는건 좀 구린데?
+            expect(items.length).toEqual(1);
+        });
+        //it('특정 모델을 가져온다', function() {
+        //
+        //});
+        //it('특정 모델을 수정한후 콜렉션에 저장한다', function() {
+        //
+        //});
+
     });
 });
