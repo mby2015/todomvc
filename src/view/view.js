@@ -1,18 +1,23 @@
-define(['underscore', 'backbone'], function(_, Backbone) {
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+    'text!template/todo.html'
+], function($, _, Backbone, html) {
     var View = Backbone.View.extend({
-        //el: $('body'),
-        //initialize: function() {
-        //    this.model.bind('reset', this.render, this);
-        //},
-        //render: function() {
-        //    _.each(this.model.models, function(todo){
-        //        //var item = new ItemView({
-        //        //    model: todo
-        //        //});
-        //        //$(this.el).item.render().el;
-        //    }, this);
-        //    return this;
-        //}
+        el: $('.main'),
+        initialize: function() {
+            this.model.bind('reset', this.render, this);
+        },
+        render: function() {
+            _.each(this.model.models, function(todo){
+                //var item = new ItemView({
+                //    model: todo
+                //});
+                //$(this.el).item.render().el;
+            }, this);
+            return this;
+        }
     });
 
     //var ItemView = Backbone.View.extend({
@@ -26,4 +31,4 @@ define(['underscore', 'backbone'], function(_, Backbone) {
     //});
 
     return View;
-}); 
+});

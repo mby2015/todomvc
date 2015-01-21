@@ -12,10 +12,15 @@ requirejs.config({
     paths: {
         'jquery': '../bower/jquery/dist/jquery',
         'underscore': '../bower/underscore/underscore',
-        'backbone': '../bower/backbone/backbone-min'
+        'backbone': '../bower/backbone/backbone-min',
+        'template': '../src/template/todo',
+        'text': '../bower/requirejs/text/text'
     },
 
     shim: {
+        'jquery': {
+            exports: '$'
+        },
         'underscore': {
             exports: '_'
         },

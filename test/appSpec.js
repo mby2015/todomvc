@@ -1,4 +1,8 @@
-define(['collection/collection', 'model/model', 'view/view'], function(Todos, Todo, TodosView) {
+define([
+    'collection/collection',
+    'model/model',
+    'view/view'
+], function(Todos, Todo, TodosView) {
     describe('TODO', function() {
         var items,
             itemsView;

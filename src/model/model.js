@@ -1,4 +1,7 @@
-define(['underscore', 'backbone'], function(_, Backbone) {
+define([
+    'underscore',
+    'backbone'
+], function(_, Backbone) {
     var Item = Backbone.Model.extend({
         default: {
             title: '',
