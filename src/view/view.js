@@ -1,9 +1,8 @@
 define([
     'jquery',
     'underscore',
-    'backbone',
-    'text!template/todo.html'
-], function($, _, Backbone, html) {
+    'backbone'
+], function($, _, Backbone) {
     var View = Backbone.View.extend({
         el: $('.main'),
         initialize: function() {
