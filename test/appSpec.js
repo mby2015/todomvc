@@ -13,6 +13,7 @@ define([
                 collection: items
             });
         });
+
         it('콜렉션이 만들어 졌는지 확인한다', function() {
             expect(items).toBeDefined();
         });
@@ -20,8 +21,7 @@ define([
             expect(itemsView).toBeDefined();
         });
         it('모델을 콜렉션에 추가한다', function() {
-            items.push([{ title: 'my wish items', note: '- apple imac retina display, - furniture, - earphone', dueDate: '2015-01-24', completed: false }])
-            //모델이 잘 들어갔는지 확인을 이렇게 하는건 좀 구린데?
+            items.add([{ title: 'supermarket', note: '- carrot', dueDate: '2015-01-29', completed: false }]);
             expect(items.size()).toEqual(1);
         });
         //it('특정 모델을 가져온다', function() {

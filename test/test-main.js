@@ -13,8 +13,8 @@ requirejs.config({
         'jquery': '../bower/jquery/dist/jquery',
         'underscore': '../bower/underscore/underscore',
         'backbone': '../bower/backbone/backbone-min',
-        'template': '../src/template/todo',
-        'text': '../bower/requirejs/text/text'
+        'text': '../bower/requirejs/text/text',
+        'template': 'template'
     },
 
     shim: {
