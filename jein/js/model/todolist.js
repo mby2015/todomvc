@@ -9,7 +9,10 @@ define([
      * @constructor
      */
     var Todolist = Backbone.Collection.extend({
-        model: Todo
+        model: Todo,
+        initialize: function() {
+
+        }
     });
 
     return Todolist;
