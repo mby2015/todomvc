@@ -5,31 +5,30 @@ define([
 ], function(Todos, Todo, TodosView) {
     describe('TODO', function() {
         var items,
-            itemsView;
+            view;
 
         beforeEach(function() {
             items = new Todos();
-            itemsView = new TodosView({
+            view = new TodosView({
                 collection: items
             });
+            items.add([{ title: 'supermarket', note: '- carrot', dueDate: '15/1/29', completed: false }]);
         });
 
-        it('콜렉션이 만들어 졌는지 확인한다', function() {
+        it('TODO 리스트가 만들어 졌는지 확인한다', function() {
             expect(items).toBeDefined();
         });
-        it('뷰가 만들어 졌는지 확인한다', function() {
-            expect(itemsView).toBeDefined();
+        it('TODO 리스트 뷰가 만들어 졌는지 확인한다', function() {
+            expect(view).toBeDefined();
         });
-        it('모델을 콜렉션에 추가한다', function() {
-            items.add([{ title: 'supermarket', note: '- carrot', dueDate: '2015-01-29', completed: false }]);
-            expect(items.size()).toEqual(1);
+        it('TODO 모델를 추가한다', function() {
+            items.add([{ title: 'book', note: '- backbone', dueDate: '15/1/26', completed: false }]);
+            expect(items.size()).toEqual(2);
         });
-        //it('특정 모델을 가져온다', function() {
-        //
-        //});
-        //it('특정 모델을 수정한후 콜렉션에 저장한다', function() {
-        //
-        //});
+        it('TODO 모델을 삭제한다. ', function() {
+
+        });
+
 
     });
 });

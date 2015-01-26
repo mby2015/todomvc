@@ -10,11 +10,14 @@ requirejs.config({
     baseUrl: '/base/src/',
 
     paths: {
-        'jquery': '../bower/jquery/dist/jquery',
-        'underscore': '../bower/underscore/underscore',
-        'backbone': '../bower/backbone/backbone-min',
-        'text': '../bower/requirejs/text/text',
-        'template': 'template'
+        'jquery': '../lib/jquery.min',
+        'underscore': '../lib/underscore-min',
+        'backbone': '../lib/backbone-min',
+        'text': '../lib/text',
+
+        'template': 'template',
+
+        'itemView': 'view/itemView'
     },
 
     shim: {
