@@ -15,10 +15,10 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'bower/jquery/dist/jquery.js',
-            'bower/underscore/underscore.js',
-            'bower/backbone/backbone-min.js',
-            {pattern: 'bower/requirejs/text/text.js', included: false},
+            'lib/jquery.min.js',
+            'lib/underscore-min.js',
+            'lib/backbone-min.js',
+            {pattern: 'lib/text.js', included: false},
             {pattern: 'src/**/*.js', included: false},
             {pattern: 'test/**/*Spec.js', included: false},
             {pattern: 'src/**/*.html', included: false},
